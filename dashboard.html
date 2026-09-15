@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Quizerr</title>
+    <meta name="description" content="Track your quiz progress, view score trends, and analyze your strongest and weakest categories on Quizerr.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+
+<body>
+    <header class="d-flex flex-wrap justify-content-center border-bottom"> 
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <span class="website-logo">Quizerr</span> 
+        </a>
+        <ul class="nav nav-pills align-items-center">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="newquiz.html" class="nav-link">Quiz</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+            <li class="nav-item"><button class="mode-toggle" onclick="toggleDarkMode()"><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
+        </ul>
+    </header>
+
+    <main class="dashboard-container" id="dashboard-main">
+        <!-- Dashboard content is dynamically rendered by dashboard.js -->
+        <!-- It will show either the full dashboard or an empty state -->
+    </main>
+
+    <script src="dashboard.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+
+</html>

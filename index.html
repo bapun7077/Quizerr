@@ -22,8 +22,8 @@
         <ul class="nav nav-pills align-items-center">
             <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="newquiz.html" class="nav-link">Quiz</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Mode</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+            <li class="nav-item"><button class="mode-toggle" onclick="toggleDarkMode()"><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
         </ul>
     </header>
 
@@ -68,9 +68,13 @@
                 <p class="features-text mb-0">Create high-quality quizzes in seconds. Simply drop a link, text prompt, or file and let the system do the rest.</p>
             </div>
         </div>
+
+        <!-- Lifetime Stats (populated dynamically by index.js) -->
+        <div class="lifetime-stats" id="lifetime-stats"></div>
     </main>
 
     <script src="index.js"></script>
+    <script src="darkmode.js"></script>
 </body>
 
 </html>

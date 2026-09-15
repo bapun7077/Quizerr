@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results — Quizerr</title>
+    <meta name="description" content="View your quiz results, score breakdown, and incorrect answers on Quizerr.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+
+<body>
+    <header class="d-flex flex-wrap justify-content-center border-bottom"> 
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <span class="website-logo">Quizerr</span> 
+        </a>
+        <ul class="nav nav-pills align-items-center">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="newquiz.html" class="nav-link active">Quiz</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+            <li class="nav-item"><button class="mode-toggle" onclick="toggleDarkMode()"><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
+        </ul>
+    </header>
+
+    <main class="results-container">
+        <div class="results-wrapper">
+            <h1 class="results-title" id="results-title">Quiz Complete!</h1>
+            <p class="results-subtitle" id="results-subtitle">Here's how you performed</p>
+
+            <!-- Score Ring -->
+            <div class="score-ring-container">
+                <svg viewBox="0 0 180 180">
+                    <circle class="score-ring-bg" cx="90" cy="90" r="80"></circle>
+                    <circle class="score-ring-fill" id="score-ring" cx="90" cy="90" r="80"
+                        stroke-dasharray="502.65" stroke-dashoffset="502.65"></circle>
+                </svg>
+                <div class="score-ring-text">
+                    <div class="score-ring-value" id="score-value">0/10</div>
+                    <div class="score-ring-label">Score</div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="results-stats">
+                <div class="result-stat-card">
+                    <div class="result-stat-icon correct"><i class="bi bi-check-circle-fill"></i></div>
+                    <div class="result-stat-value" id="correct-count">0</div>
+                    <div class="result-stat-label">Correct</div>
+                </div>
+                <div class="result-stat-card">
+                    <div class="result-stat-icon wrong"><i class="bi bi-x-circle-fill"></i></div>
+                    <div class="result-stat-value" id="wrong-count">0</div>
+                    <div class="result-stat-label">Wrong</div>
+                </div>
+                <div class="result-stat-card">
+                    <div class="result-stat-icon skipped"><i class="bi bi-dash-circle-fill"></i></div>
+                    <div class="result-stat-value" id="skipped-count">0</div>
+                    <div class="result-stat-label">Skipped</div>
+                </div>
+            </div>
+
+            <!-- Answer Breakdown -->
+            <div class="breakdown-section" id="breakdown-section">
+                <h2 class="breakdown-title"><i class="bi bi-list-check"></i> Answer Breakdown</h2>
+                <div id="breakdown-list">
+                    <!-- Dynamically populated by results.js -->
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="results-actions">
+                <button class="start-btn" id="save-btn">
+                    <i class="bi bi-save-fill"></i> Save & View Dashboard
+                </button>
+                <a href="newquiz.html" class="text-decoration-none" style="flex:1;">
+                    <button class="btn-outline" style="width:100%;">
+                        <i class="bi bi-arrow-repeat"></i> Try Again
+                    </button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="results.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+
+</html>

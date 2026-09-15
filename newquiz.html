@@ -22,8 +22,8 @@
         <ul class="nav nav-pills align-items-center">
             <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="newquiz.html" class="nav-link active">Quiz</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Mode</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+            <li class="nav-item"><button class="mode-toggle" onclick="toggleDarkMode()"><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
         </ul>
     </header>   
     
@@ -35,24 +35,26 @@
             <div class="config-card">
                 <div class="setting-group">
                     <label>Category</label>
-                    <select class="dropdown">
-                        <option>Any Tech Category</option>
-                        <option value="cs">Computer Science</option>
-                        <option value="gadgets">Gadgets</option>
-                        <option value="gk">General Knowledge</option>
-                        <option value="film">Film</option>
-                        <option value="games">Games</option>
-                        <option value="trending">Trending</option>
+                    <select class="dropdown" id="category-select">
+                        <option value="">Any Category</option>
+                        <option value="18">Science: Computers</option>
+                        <option value="30">Science: Gadgets</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="15">Entertainment: Video Games</option>
+                        <option value="17">Science & Nature</option>
+                        <option value="19">Science: Mathematics</option>
+                        <option value="23">History</option>
                     </select>
                 </div>
 
                 <div class="setting-group">
                     <label>Difficulty</label>
                     <div class="button-group">
-                        <button class="btn-primary-outline" id="anyDifficulty">Any Difficulty</button>
-                        <button class="btn-secondary" id="easy">Easy</button>
-                        <button class="btn-secondary" id="medium">Medium</button>
-                        <button class="btn-secondary" id="hard">Hard</button>
+                        <button class="btn-primary-outline" id="anyDifficulty" data-difficulty="">Any Difficulty</button>
+                        <button class="btn-secondary" id="easy" data-difficulty="easy">Easy</button>
+                        <button class="btn-secondary" id="medium" data-difficulty="medium">Medium</button>
+                        <button class="btn-secondary" id="hard" data-difficulty="hard">Hard</button>
                     </div>
                 </div>
 
@@ -77,6 +79,7 @@
     </main>
 
     <script src="index.js"></script>
+    <script src="darkmode.js"></script>
 </body>
 
 </html>
